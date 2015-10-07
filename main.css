@@ -1,0 +1,141 @@
+html {
+}
+
+body {
+    margin:auto;
+    padding: 2em 2em 2em 2em;
+    min-width: 500px;
+    max-width: 85%;  
+    background-color: darkgrey;
+}
+
+section {
+    padding: 10px;
+    height: 200px;
+    max-width: 95%;
+    min-width: 400px;
+   }
+    
+section.firstrow {
+    clear: both;
+    margin: auto;
+   }
+
+section.secondrow {
+    clear: both;
+    margin: auto;
+
+   }
+
+section.thirdrow {
+    clear: both;
+    margin: auto;
+   }
+
+section div {
+   height: 100%;
+    width: 30%;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    display:inline-flex;
+    margin:5px;
+    float: left;
+        
+}
+
+.hidden {
+    border:2px solid transparent;
+    background-color: transparent;
+}
+
+.hidden:hover {
+    background-color: transparent;
+    opacity:0;
+    box-shadow: 0px 0px 0px transparent;
+}
+    
+.new {
+    position: relative;
+    background-color:#ec1c3c; 
+    opacity: .85;
+    padding: 0px;
+    }
+
+.new:hover {
+    background-color: #ec1c3c;
+    opacity: 100;
+}
+div:hover {
+    background-color: lightgrey;
+    opacity: .9;
+    box-shadow: 3px 3px 100px white;
+}
+
+div:active {
+    background-color: white;
+    border:2px solid white;
+    opacity: 1;
+    box-shadow: 3px 3px 100px white;
+}
+
+p {
+    height: auto;
+    width: 100%;
+    color: white;
+    font-style: italic;
+    font-size: 14pt;
+    font-family: Lato;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+hilite {
+    background-color: white;
+    border:2px solid white;
+    opacity: 1;
+    box-shadow: 3px 3px 100px white;
+}
+    
+
+a {
+    color: #0083e8;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+samp {
+    display: none;
+}
+
+img {
+    -webkit-animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+    animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+    background: transparent;
+    border: 10px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: block;
+    margin: 1.3em auto;
+    max-width: 95%;
+}
+
+@-webkit-keyframes colorize {
+    0% {
+        -webkit-filter: grayscale(100%);
+    }
+    100% {
+        -webkit-filter: grayscale(0%);
+    }
+}
+
+@keyframes colorize {
+    0% {
+        filter: grayscale(100%);
+    }
+    100% {
+        filter: grayscale(0%);
+    }
