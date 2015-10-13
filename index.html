@@ -1,62 +1,110 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>GETTING STARTED WITH BRACKETS</title>
-        <meta name="description" content="Ortho Clinical Diag Testing">
-        <link rel="stylesheet" href="main.css">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whee!</title>
+    <style type="text/css" media="screen" link="main.css">
+
+body {
+    background-color: gray;
+}
+
+.f {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+.c {
+    align-content: center;
+    justify-content: center;
+}
+.b {
+    width: 30%;
+    height: 100px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.active, .b:hover {
+    background-color: white;
+    border:2px solid white;
+    opacity: .95;
+    box-shadow: 3px 3px 100px white;
+    transition:all 0.3s;
+}
+.active {
+    font-family: Lato;
+    color:gray;
+    font-size: 14pt;
+    align-content: center;
+    text-align: center;
+        }
+
+
+#new{
+    background-color:#ec1c3c;
+     opacity: .85;
+}
+
+ p {
+    font-family: Lato;
+    color:white;
+    font-size: 14pt;
+    align-content: center;
+    text-align: center;
+        }
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+.g {
+     font-family: Lato;
+    color:white;
+    font-size: 10pt;
+    align-content: center;
+    text-align: center;
+        }
 
-$(document).ready(function(){  /* when the page has loaded... */
-  $('div').click(function(){  /* ...bind click event to .boxSet elements */
-    $('div').removeClass('hilite'); /* On click, remove any 'hilite' class */
-    $(this).addClass('hilite'); /* ...and add 'hilite' class to clicked element */ 
-   });
-});
- 
-        </script>
- 
-    </head>
-    <body>
-        <section class="firstrow">
-                <div class="big">             
-                </div>
 
-               <div class="big">
-                </div>
 
-                <div class="big">
-                </div>
-        </section>
-        <section class="secondrow">
-                   <div class="hidden"> 
-                </div>
-        
-               <div class="new"> <p> Ortho Clinical Diagnostics </p>
-                </div>
-            
-            <div class="hidden"> 
-                </div>
-
-        </section>
-        <section class="thirdrow">
-
-                <div class="big">             
-                </div>
-
-                <div class="big">
-                </div>
-
-                <div class="big">
-                </div>   
-        </section>
-    </body>
-    <footer>
-    
-    </footer>
-        
-    
+    </style>
+</head>
+<body lang="en">
+<div class="w">
+<div class="f">
+    <div id="box" class="b">
+    <p> Old Machine #1</p></div>
+    <div class="b">
+    <p> Old Machine #2</p></div>
+    <div class="b">
+    <p> Old Machine #3</p></div>
+</div>
+<div class="f c">
+    <div id="new" class="b a">
+        <p>Ortho Clinical Diagnostics </p>
+    <p class="g"> Vitros 5600</p></div>
+</div>
+<div class="f">
+    <div class="b">
+    <p> Old Machine #4</p></div>
+    <div class="b">
+    <p> Old Machine #5</p></div>
+    <div class="b">
+    <p> Old Machine  #6</p></div>
+</div>
+</div>
+    <script type="text/javascript" charset="utf-8">
+        var f = document.querySelector('#box');
+        var boxes = document.querySelectorAll('.b');
+        console.log(boxes);
+        for (var i = 0; i < boxes.length; i += 1) {
+            var box = boxes[i];
+            box.addEventListener('click', function (event) {
+                var clickedBox = event.target;
+                if (clickedBox.classList.contains("active")) {
+                     clickedBox.classList.remove("active")
+                } else {
+                     clickedBox.classList.add("active")
+                 }
+            });
+        }
+    </script>
+</body>
 </html>
